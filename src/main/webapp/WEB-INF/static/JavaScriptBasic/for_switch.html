@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 중첩for문 </title>
+<p>선택문</p>
+<p>중첩 if문</p>
+<script>
+/* 중첩 for문  */
+	for(var i = 1; i <= 3; i++){
+		for(var k = 1; k <= 2; k++){
+			document.write(i + "행" + k + "열", "<br>");
+		}
+		document.write("<br>");
+	}
+
+/*  선택문  */	
+	var site = prompt("네이버, 다음, 네이트, 구글 중 \
+	즐겨 사용하는 포털 검색 사이트는?", "");
+	var url;
+
+	switch(site){
+		case "구글": url = "www.google.com";
+		break;
+		case "다음": url = "www.daum.net";
+		break;
+		case "네이버": url = "www.naver.com";
+		break;
+		case "네이트": url = "www.nate.com";
+		break;
+		default: alert("보기 중에 없는 사이트입니다.");
+	}
+
+	if(url) location.href = "http://" + url;	
+
+/* 중첩 if 문 */
+	var id = "easy1004";
+	var pw = "112233";
+
+	var user_id = prompt("아이디는?","");
+	var user_pw = prompt("비밀번호는?","");
+
+	if(id == user_id) {
+		if(pw == user_pw) {
+				document.write(user_id+"님 반갑습니다!");
+		} else {
+				alert("비밀번호가 일치하지 않습니다.");
+				location.reload();
+		}
+	} else {
+		alert("아이디가 일치하지 않습니다.");
+		location.reload();
+	}
+</script>
+</head>
+<body>
+</body>
+</html>
